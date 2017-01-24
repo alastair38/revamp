@@ -1,0 +1,238 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+
+
+      <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+      <style>
+
+      /*Animations*/
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+
+      @-webkit-keyframes reveal {
+          0%   { opacity: 0;}
+          100% { opacity: 1; }
+        }
+
+      @keyframes reveal {
+          0%   { opacity: 0;}
+          100% { opacity: 1;}
+        }
+
+        /*base styles*/
+
+        body {
+          background: #03A9F4;
+          color: black;
+          font-family: monospace;
+          transition: 150ms;
+          margin: 0;
+          line-height: 1.5;
+          font-size: 130%;
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        /*Base header styles*/
+
+        h1, h2 {
+          font-family: 'Alfa Slab One', serif;
+        }
+
+        h2 {
+          font-size: 1.75em; /* 1.5em for Bevan */
+        }
+
+        .s6 h2 {
+          border-bottom: 6px solid transparent;
+          -webkit-border-image: url(diagonal.png) 45 repeat;
+          -o-border-image: url(diagonal.png) 45 repeat;
+          border-image: url(diagonal.png) 45 repeat;
+        }
+
+          /*Link styles*/
+
+        a {
+          border-bottom: 2px dotted transparent;
+          transition: 150ms;
+          padding-bottom: 2px;
+          color: white;
+        }
+
+        a:hover {
+          border-bottom: 2px dotted;
+          text-decoration: none;
+          background-color: rgba(0,0,0,0.1);
+        }
+
+        /*Splash page styles*/
+
+        #splash {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #03A9F4;
+          color: rgb(53, 51, 51);
+          z-index: 999;
+        }
+
+        #splash h1 {
+          font-size: 1.5em;
+        }
+
+        #splash h2 {
+          font-size: 1.5em;
+        }
+
+        .splash-content {
+          margin-top: 35vh;
+        }
+
+        /*Splash page applied styles*/
+
+        .translateY {
+          transform: translateY(-100vh);
+          transition: 500ms;
+        }
+
+        /*Logo styles*/
+
+        h1#logo {
+        font-size: 1.2em; /* 1em for Bevan */
+        margin: 1rem !important;
+        }
+
+        span#antLogo, span#splashLogo {
+          background: rgb(53, 51, 51);
+          font-size: 30px;
+          display: inline-block;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          text-align: center;
+          line-height: 50px;
+          transform: rotate(33deg);
+          color: white;
+          font-family:'Segoe UI Symbol';
+        }
+
+        #antLogo:focus {
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; /* shake animation handy for drawing attention to help button*/      }
+
+        /*Navigation styles*/
+
+        nav {
+          background: #03A9F4;
+          box-shadow: none !important;
+        }
+
+        nav li a, a.brand-logo {
+          color: #white;
+        }
+
+        /*Content + image styles*/
+
+        .biog {
+          padding-top: 3em !important;
+        }
+
+        img.circle.responsive-img {
+          border: 2px solid rgba(255,255,255,.1);
+          transition: 150ms;
+        }
+
+        img.circle.responsive-img:hover {
+          background: rgba(255,255,255,.1);
+        }
+
+        .s12 img {
+          width: 100%;
+          margin-bottom: 10%;
+        }
+
+      </style>
+    </head>
+    <body id="body">
+      <div class="navbar-fixed">
+         <nav>
+           <div class="nav-wrapper">
+             <h1 id="logo" class="left">Alastair Cox</h1>
+             <span class="brand-logo center"><span id="antLogo">&#x1f41c;</span></span>
+             <ul class="right">
+               <li><a href="mailto:alastair@alastaircox.com" target="_blank">Email</a></li>
+               <li><a href="http://twitter.com/dementiamap" target="_blank">Twitter</a></li>
+               <li><a href="https://github.com/alastair38" target="_blank">Github</a></li>
+             </ul>
+           </div>
+         </nav>http://twitter.com/dementiamap
+       </div>
+       <div id="splash" class="center">
+         <div class="splash-content center">
+           <h1 >Alastair Cox</h1>
+           <span id="splashLogo">&#x1f41c;</span>
+           <h2>Web design & development</h2>
+         </div>
+       </div>
+      <div class="container">
+        <div class="biog row">
+          <div class="col s12 l3" >
+            <img class="circle responsive-img" alt="Eighties style digitised avatar of Alastair Cox" src="moi_scanlines.png" />
+          </div>
+          <div class="col s12 l9" >
+            <p>Web developer/designer, open standards advocate, static cyclist and for-purpose worker ant. Specialising in Progressive Web Apps for non-profit and academic projects.</p>
+            <p>I work primarily with Jekyll, Roots, Polymer, Firebase, Grav and Wordpress.</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col s6">
+            <h2>Work</h2>
+            <a href="http://begoodeie.com/" target="_blank">BeGood</a>,
+            <a href="http://sociologyofaging.org/" target="_blank">Sociology of Aging</a>,
+            <a href="http://criticalglobalhealth.org/" target="_blank">Critical Global Health</a>
+          </div>
+
+          <div class="col s6">
+            <h2>Labs</h2>
+            You can be here (coming soon),
+            <a href="http://www.intheburgh.co.uk/dementiawords/" target="_blank">#DementiaWords</a>
+          </div>
+        </div>
+      </div>
+
+  <script>
+  $(document).ready(function(){
+     // adds translateY class after 3 seconds, also Adjusts body height and overflow
+     function splashFunction() {
+       document.getElementById("splash").classList.toggle("translateY");
+       document.getElementById("body").style.height = "auto";
+       document.getElementById("body").style.overflow = "visible";
+   }
+
+   setTimeout(splashFunction, 3000);
+   });
+  </script>
+
+    </body>
+</html>
