@@ -54,7 +54,7 @@
           transition: 150ms;
           margin: 0;
           line-height: 1.5;
-          font-size: 130%;
+          font-size: 120%;
           height: 100vh;
           overflow: hidden;
         }
@@ -116,6 +116,7 @@
           margin-top: 35vh;
         }
 
+
         /*Splash page applied styles*/
 
         .translateY {
@@ -124,13 +125,24 @@
         }
 
         /*Logo styles*/
-
+        @media only screen and (max-width: 600px) {
+          h1#logo {
+            font-size: 3rem;
+            bottom: -.5rem !important;
+          }
+          span#blurb {
+            font-size: .8rem;
+          }
+        }
         h1#logo {
-        font-size: 1.2em; /* 1em for Bevan */
-        margin: 1rem !important;
+        /*font-size: 1.2em;
+        margin: 1rem !important;*/
+        position: absolute;
+        line-height: 0rem;
+        bottom: 0;
         }
 
-        span#antLogo, span#splashLogo {
+        span#splashLogo {
           background: rgb(53, 51, 51);
           font-size: 30px;
           display: inline-block;
@@ -143,6 +155,21 @@
           color: white;
           font-family:'Segoe UI Symbol';
         }
+
+        span#antLogo {
+          background: rgb(53, 51, 51);
+          font-size: 20px;
+          display: inline-block;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          line-height: 40px;
+          transform: rotate(33deg);
+          color: white;
+          font-family:'Segoe UI Symbol';
+        }
+
 
         #antLogo:focus {
         animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; /* shake animation handy for drawing attention to help button*/      }
@@ -178,19 +205,25 @@
           margin-bottom: 10%;
         }
 
+.row:last-of-type {margin-top: 3rem;}
+
+.s12 a {margin: 0 1rem 0 0; display: inline-block;}
+
+span#blurb {color: rgb(53, 51, 51);
+    position: absolute;
+    bottom: -1.5rem;
+    left: 9rem;
+    font-family: 'Alfa Slab One';}
+
       </style>
     </head>
     <body id="body">
       <div class="navbar-fixed">
          <nav>
            <div class="nav-wrapper">
-             <h1 id="logo" class="left">Alastair Cox</h1>
-             <span class="brand-logo center"><span id="antLogo">&#x1f41c;</span></span>
-             <ul class="right">
-               <li><a href="mailto:alastair@alastaircox.com" target="_blank">Email</a></li>
-               <li><a href="http://twitter.com/dementiamap" target="_blank">Twitter</a></li>
-               <li><a href="https://github.com/alastair38" target="_blank">Github</a></li>
-             </ul>
+             <h1 id="logo" class="">Alastair Cox</h1><span id="blurb" class="">web design & development</span>
+             <span class="brand-logo center hide-on-med-and-down"><span id="antLogo">&#x1f41c;</span></span>
+
            </div>
          </nav>http://twitter.com/dementiamap
        </div>
@@ -206,12 +239,16 @@
           <div class="col s12 l3" >
             <img class="circle responsive-img" alt="Eighties style digitised avatar of Alastair Cox" src="moi_scanlines.png" />
           </div>
-          <div class="col s12 l9" >
+          <div class="col s12 l9">
             <p>Web developer/designer, open standards advocate, static cyclist and for-purpose worker ant. Specialising in Progressive Web Apps for non-profit and academic projects.</p>
             <p>I work primarily with Jekyll, Roots, Polymer, Firebase, Grav and Wordpress.</p>
+            <a href="mailto:alastair@alastaircox.com" target="_blank">Email</a>
+            <a href="http://twitter.com/dementiamap" target="_blank">Twitter</a>
+            <a href="https://github.com/alastair38" target="_blank">Github</a>
+
             </div>
         </div>
-        <div class="row">
+        <div class="row flow-text">
           <div class="col s6">
             <h2>Work</h2>
             <a href="http://begoodeie.com/" target="_blank">BeGood</a>,
@@ -221,10 +258,12 @@
 
           <div class="col s6">
             <h2>Labs</h2>
-            You can be here (coming soon),
+            <span>You can be here (beta),</span>
             <a href="http://www.intheburgh.co.uk/dementiawords/" target="_blank">#DementiaWords</a>
           </div>
         </div>
+
+
       </div>
 
   <script>
